@@ -2,8 +2,8 @@
 # coding: utf-8
 
 import os
-from BaseHTTPServer import HTTPServer
-from CGIHTTPServer import CGIHTTPRequestHandler
+from http.server import HTTPServer
+from http.server import CGIHTTPRequestHandler
 
 
 class RequestHandler(CGIHTTPRequestHandler):
@@ -31,7 +31,7 @@ class RequestHandler(CGIHTTPRequestHandler):
 
 
 http_server = HTTPServer(("", 8080), RequestHandler)
-print "The server listens on http://localhost:8080"
+print("The server listens on http://localhost:8080")
 http_server.serve_forever()
 
 

@@ -22,5 +22,5 @@ rpc_client = pyjsonrpc.HttpClient("http://localhost:8080")
 now = datetime.datetime.now()
 
 
-print repr(now)  # datetime.datetime(2016, 4, 7, 16, 51, 12, 483694)
-print repr(rpc_client.add_one_hour(timestamp = now))  # datetime.datetime(2016, 4, 7, 17, 51, 12)
+print(repr(now))  # datetime.datetime(2016, 4, 7, 16, 51, 12, 483694)
+print(repr(rpc_client.add_one_hour(timestamp = now)))  # datetime.datetime(2016, 4, 7, 17, 51, 12)

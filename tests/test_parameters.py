@@ -30,7 +30,7 @@ def test_positional_params_example():
     # Result
     response = pyjsonrpc.parse_response_json(response_json)
     if response.error:
-        print "Error:", response.error.code, response.error.message
+        print("Error:", response.error.code, response.error.message)
     else:
         # 3
         #print "Result:", response.result
@@ -55,7 +55,7 @@ def test_named_params_example():
     # Result
     response = pyjsonrpc.parse_response_json(response_json)
     if response.error:
-        print "Error:", response.error.code, response.error.message
+        print("Error:", response.error.code, response.error.message)
     else:
         # 3
         #print "Result:", response.result
@@ -80,7 +80,7 @@ def test_mixed_params_example():
     # Result
     response = pyjsonrpc.parse_response_json(response_json)
     if response.error:
-        print "Error:", response.error.code, response.error.message
+        print("Error:", response.error.code, response.error.message)
     else:
         # 3
         #print "Result:", response.result

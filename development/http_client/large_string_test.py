@@ -16,9 +16,9 @@ rpc_client = pyjsonrpc.HttpClient("http://localhost:8080", gzipped = False)
 
 
 # Create very large string
-s = u"We are the champions! " * (47662 * 50)  # 50 MiB
-print len(s)
+s = "We are the champions! " * (47662 * 50)  # 50 MiB
+print(len(s))
 
 # Example
-print rpc_client.add(u"Long string: ", s)[:1000]
+print(rpc_client.add("Long string: ", s)[:1000])
 

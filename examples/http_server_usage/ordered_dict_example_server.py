@@ -25,9 +25,9 @@ class RequestHandler(pyjsonrpc.HttpRequestHandler):
     def format_text(self, data):
         """Test Method"""
 
-        retstr = u""
-        for key, value in data.items():
-            retstr += u"{key}: {value}\n".format(key = key, value = value)
+        retstr = ""
+        for key, value in list(data.items()):
+            retstr += "{key}: {value}\n".format(key = key, value = value)
 
         return retstr.rstrip()
 
@@ -37,10 +37,10 @@ http_server = pyjsonrpc.ThreadingHttpServer(
     server_address = ('localhost', 8080),
     RequestHandlerClass = RequestHandler
 )
-print "Starting HTTP server ..."
-print "URL: http://localhost:8080"
+print("Starting HTTP server ...")
+print("URL: http://localhost:8080")
 try:
     http_server.serve_forever()
 except KeyboardInterrupt:
     http_server.shutdown()
-print "Stopping HTTP server ..."
+print("Stopping HTTP server ...")

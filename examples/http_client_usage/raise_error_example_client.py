@@ -15,8 +15,8 @@ import pyjsonrpc
 rpc_client = pyjsonrpc.HttpClient("http://localhost:8080", gzipped = True)
 
 try:
-    print repr(rpc_client.call("add", 1, 2))
+    print(repr(rpc_client.call("add", 1, 2)))
 except pyjsonrpc.JsonRpcError as err:
-    print err.code
-    print err.message
-    print err.data
+    print(err.code)
+    print(err.message)
+    print(err.data)

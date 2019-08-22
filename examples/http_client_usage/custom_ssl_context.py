@@ -24,5 +24,5 @@ rpc_client = pyjsonrpc.HttpClient(
     "https://localhost:8080", gzipped = True, ssl_context = context
 )
 
-print rpc_client.call("add", 1, 2)
+print(rpc_client.call("add", 1, 2))
 

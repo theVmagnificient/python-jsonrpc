@@ -37,7 +37,7 @@ response = pyjsonrpc.parse_response_json(response_json)
 
 # 5. Print result or error
 if response.error:
-    print "Error:", response.error.code, response.error.message
+    print("Error:", response.error.code, response.error.message)
 else:
-    print "Result:", response.result
+    print("Result:", response.result)
 

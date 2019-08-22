@@ -20,8 +20,8 @@ class RequestHandler(pyjsonrpc.HttpRequestHandler):
         """Test Method"""
 
         raise pyjsonrpc.JsonRpcError(
-            message = u"TEST-ERROR",
-            data = u"This is a test error with umlauts ÖÄÜ",
+            message = "TEST-ERROR",
+            data = "This is a test error with umlauts ÖÄÜ",
             code = 1234
         )
 
@@ -33,10 +33,10 @@ http_server = pyjsonrpc.ThreadingHttpServer(
     server_address = ('localhost', 8080),
     RequestHandlerClass = RequestHandler
 )
-print "Starting HTTP server ..."
-print "URL: http://localhost:8080"
+print("Starting HTTP server ...")
+print("URL: http://localhost:8080")
 try:
     http_server.serve_forever()
 except KeyboardInterrupt:
     http_server.shutdown()
-print "Stopping HTTP server ..."
+print("Stopping HTTP server ...")

@@ -15,10 +15,10 @@ import pyjsonrpc
 rpc_client = pyjsonrpc.HttpClient("http://localhost:8080")
 
 # Example with *multiple calls* in one request
-print rpc_client.call([
+print(rpc_client.call([
     pyjsonrpc.Request.create("add", 1, 2),
     pyjsonrpc.Request.create("add", 3, 4)
-])
+]))
 
 # Example with *multiple notifications* (no response) in one request
 rpc_client.notify([

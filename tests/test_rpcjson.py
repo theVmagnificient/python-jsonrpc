@@ -7,11 +7,11 @@ Nosetests for *rpcjson.py*.
 import pyjsonrpc.rpcjson
 
 
-EXAMPLE_LIST = [1, u"a", u"Ä"]
-EXAMPLE_LIST_JSON = '[1, "a", "\u00c4"]'
+EXAMPLE_LIST = [1, "a", "Ä"]
+EXAMPLE_LIST_JSON = '[1, "a", "\\u00c4"]'
 
-EXAMPLE_DICT = {"a": u"Ä"}
-EXAMPLE_DICT_JSON = '{"a": "\u00c4"}'
+EXAMPLE_DICT = {"a": "Ä"}
+EXAMPLE_DICT_JSON = '{"a": "\\u00c4"}'
 
 
 def test_dumps_list():

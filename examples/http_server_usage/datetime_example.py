@@ -35,10 +35,10 @@ http_server = pyjsonrpc.ThreadingHttpServer(
     server_address = ('localhost', 8080),
     RequestHandlerClass = RequestHandler
 )
-print "Starting HTTP server ..."
-print "URL: http://localhost:8080"
+print("Starting HTTP server ...")
+print("URL: http://localhost:8080")
 try:
     http_server.serve_forever()
 except KeyboardInterrupt:
     http_server.shutdown()
-print "Stopping HTTP server ..."
+print("Stopping HTTP server ...")

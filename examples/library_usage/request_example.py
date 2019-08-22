@@ -15,17 +15,17 @@ import pyjsonrpc
 
 # Create Request-object
 request1 = pyjsonrpc.Request(method = "echo", id = "1234", params = ["foobar"])
-print request1
+print(request1)
 # -> Request(id='1234', jsonrpc='2.0', method='echo', params=['foobar'])
-print request1.to_string()
+print(request1.to_string())
 # -> {"params": ["foobar"], "jsonrpc": "2.0", "method": "echo", "id": "1234"}
 
 
 # Create Request-object, direct from JSON-String
 json_str = '{"method": "add", "params": [1, 2], "id": "1234"}'
 request2 = pyjsonrpc.Request.from_string(json_str)
-print request2
+print(request2)
 # -> Request(id=u'1234', jsonrpc='2.0', method=u'add', params=[1L, 2L])
-print request2.to_string()
+print(request2.to_string())
 # -> {"params": [1, 2], "jsonrpc": "2.0", "method": "add", "id": "1234"}
 

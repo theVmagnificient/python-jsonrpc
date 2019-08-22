@@ -105,7 +105,7 @@ def date_time_decoder(obj):
         pyjsonrpc.rpcjson.loads_object_hook = pyjsonrpc.rpcjson.date_time_decoder
     """
 
-    if isinstance(obj, basestring):
+    if isinstance(obj, str):
 
         # Check min length and if "-" exists
         check_string = obj[0:10]
@@ -162,7 +162,7 @@ def date_time_decoder(obj):
             obj[index] = date_time_decoder(value)
 
     elif isinstance(obj, dict):
-        for key, value in obj.iteritems():
+        for key, value in obj.items():
             obj[key] = date_time_decoder(value)
 
     return obj

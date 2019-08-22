@@ -15,8 +15,8 @@ import collections
 
 rpc_client = pyjsonrpc.HttpClient("http://localhost:8080", gzipped = True)
 
-print u"UNORDERED"
-print rpc_client.call("format_text", dict([
+print("UNORDERED")
+print(rpc_client.call("format_text", dict([
     ("a", "AAA"),
     ("b", "BBB"),
     ("c", "CCC"),
@@ -24,10 +24,10 @@ print rpc_client.call("format_text", dict([
     ("e", "EEE"),
     ("f", "FFF"),
     ("g", "GGG")
-]))
+])))
 
-print u"ORDERED"
-print rpc_client.call("format_text", collections.OrderedDict([
+print("ORDERED")
+print(rpc_client.call("format_text", collections.OrderedDict([
     ("a", "AAA"),
     ("b", "BBB"),
     ("c", "CCC"),
@@ -35,5 +35,5 @@ print rpc_client.call("format_text", collections.OrderedDict([
     ("e", "EEE"),
     ("f", "FFF"),
     ("g", "GGG")
-]))
+])))
 

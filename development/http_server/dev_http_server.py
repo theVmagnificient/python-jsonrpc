@@ -23,6 +23,6 @@ httpd = pyjsonrpc.ThreadingHttpServer(
     server_address = ('localhost', 8080),
     RequestHandlerClass = RequestHandler
 )
-print "Serving HTTP..."
+print("Serving HTTP...")
 httpd.serve_forever()
 

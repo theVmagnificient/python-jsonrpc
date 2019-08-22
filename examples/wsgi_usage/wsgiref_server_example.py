@@ -30,8 +30,8 @@ application = cherrypy.Application(Root())
 
 # WsgiRef-WSGIServer
 httpd = make_server('', 8080, application)
-print "Starting HTTP server ..."
-print "URL: http://localhost:8080"
+print("Starting HTTP server ...")
+print("URL: http://localhost:8080")
 httpd.serve_forever()
 
 
