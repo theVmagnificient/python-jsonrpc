@@ -20,7 +20,7 @@ Installation
 
     git clone https://github.com/theVmagnificient/python-jsonrpc
     cd python-jsonrpc
-    python3 setup.py install
+    sudo python3 setup.py install
 
 
 ===================
